@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head> <title>Progress Bar</title>
+   
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+
+<body class="body">
+
+<div id="app">
+	<div 
+		class="progress-bar"
+		style="width: 300px; height: 75px; background-color: grey; padding: 5px;">
+
+		<div 
+			class="progress-bar"
+			style="height:100%; background-color: tomato; width: 50%; text-align: center;"
+			v-bind:style="{width: progress + '%'}">
+			
+
+			{{ progress + '%' }}
+		</div>
+	</div>
+	<button type="button" 
+			v-on:click="start"
+			v-if="progress < 100"
+			>Start</button>
+</div>
+
+
+
+
+
+
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
